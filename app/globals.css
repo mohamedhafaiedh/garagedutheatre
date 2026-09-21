@@ -50236,3 +50236,46 @@ article.page,
   filter: brightness(0) !important;
 }
 
+/* ==========================================================================
+   Form Submit Button & Spinner States (Universal)
+   ========================================================================== */
+button[type="submit"]:disabled,
+.btn-disabled {
+  background-color: #9ca3af !important;
+  border-color: #9ca3af !important;
+  color: #ffffff !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  opacity: 0.85;
+}
+
+button[type="submit"]:disabled *,
+.btn-disabled * {
+  color: #ffffff !important;
+}
+
+.btn-spinner {
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: 0.875rem;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  animation: netlify-btn-spin 0.8s linear infinite;
+}
+
+.btn-spinner,
+.btn-spinner * {
+  fill: none !important;
+}
+
+@keyframes netlify-btn-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
