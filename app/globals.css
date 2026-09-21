@@ -157,8 +157,26 @@ form.submitting .wpcf7-spinner {
 	cursor: default;
 }
 
-.wpcf7 .wpcf7-submit:disabled {
-	cursor: not-allowed;
+.wpcf7 .wpcf7-submit:disabled,
+.submit-btn .wpcf7-submit:disabled,
+button.wpcf7-submit:disabled {
+	cursor: not-allowed !important;
+	background: #6c757d !important;
+	background-color: #6c757d !important;
+	color: #ffffff !important;
+	opacity: 0.75 !important;
+	border: 1px solid #5a6268 !important;
+	box-shadow: none !important;
+	transform: none !important;
+}
+
+.wpcf7 .wpcf7-submit:disabled:hover,
+.submit-btn .wpcf7-submit:disabled:hover,
+button.wpcf7-submit:disabled:hover {
+	cursor: not-allowed !important;
+	background: #6c757d !important;
+	background-color: #6c757d !important;
+	color: #ffffff !important;
 }
 
 .wpcf7 input[type="url"],
