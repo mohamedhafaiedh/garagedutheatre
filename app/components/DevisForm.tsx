@@ -34,7 +34,7 @@ export default function DevisForm() {
     try {
       const formData = new FormData(e.currentTarget);
       formData.set("form-name", "devis");
-      formData.set("subject", "Demande de devis");
+      formData.set("subject", "Nouvelle demande de devis");
       if (typeof window !== "undefined") {
         formData.set("pageUrl", window.location.href);
         formData.set("timestamp", getFormattedTimestamp());

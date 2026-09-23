@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Garage automobile multimarque au 139 rue du Théâtre, Paris 15e. Réparation mécanique, diagnostic, révision constructeur, carrosserie et devis gratuit.",
   alternates: {
-    canonical: "/",
+    canonical: "https://garagedutheatre.fr/",
   },
   openGraph: {
     title: "Garage du Théâtre GT – Réparation Automobile Paris 15",
@@ -20,6 +20,21 @@ export const metadata: Metadata = {
     siteName: "Garage du Théâtre GT",
     locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "https://garagedutheatre.fr/images/Logo-GT-500-225-px.png",
+        width: 500,
+        height: 225,
+        alt: "Garage du Théâtre GT",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Garage du Théâtre GT – Réparation Automobile Paris 15",
+    description:
+      "Garage automobile multimarque au 139 rue du Théâtre, Paris 15e. Réparation mécanique, entretien, carrosserie et devis gratuit.",
+    images: ["https://garagedutheatre.fr/images/Logo-GT-500-225-px.png"],
   },
   robots: {
     index: true,
@@ -38,7 +53,7 @@ const jsonLd = {
   "alternateName": "Meca Services",
   "image": "https://garagedutheatre.fr/images/Logo-GT-500-225-px.png",
   "@id": "https://garagedutheatre.fr/#autorepair",
-  "url": "https://garagedutheatre.fr",
+  "url": "https://garagedutheatre.fr/",
   "telephone": "+33145750505",
   "email": "garagedutheatre@gmail.com",
   "priceRange": "€€",
@@ -52,7 +67,7 @@ const jsonLd = {
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": 48.845392,
-    "longitude": 2.297590
+    "longitude": 2.29759
   },
   "openingHoursSpecification": [
     {

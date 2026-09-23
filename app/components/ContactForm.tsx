@@ -34,7 +34,7 @@ export default function ContactForm() {
     try {
       const formData = new FormData(e.currentTarget);
       formData.set("form-name", "contact");
-      formData.set("subject", "Demande de contact");
+      formData.set("subject", "Nouveau message contact du site");
       if (typeof window !== "undefined") {
         formData.set("pageUrl", window.location.href);
         formData.set("timestamp", getFormattedTimestamp());
