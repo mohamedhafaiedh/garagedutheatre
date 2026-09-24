@@ -1,21 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
+import Header from "../components/Header";
 
 export default function MerciPage() {
-  const [isSticky, setIsSticky] = useState(false);
-
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 120) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
     const scrollUp = document.getElementById("scrollUp");
     if (scrollUp) {
       const handleScrollUp = () => {
@@ -28,88 +18,15 @@ export default function MerciPage() {
       window.addEventListener("scroll", handleScrollUp);
       scrollUp.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
       return () => {
-        window.removeEventListener("scroll", handleScroll);
         window.removeEventListener("scroll", handleScrollUp);
       };
     }
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="wp-singular page-template-default page wp-custom-logo wp-theme-konstruk elementor-default elementor-kit-6 elementor-page">
       <div id="page" className="site">
-        <header id="rs-header" className="single-header header-style1 mainsmenu">
-          <div className={`header-inner menu-sticky stuck ${isSticky ? "sticky" : ""}`}>
-            <div className="toolbar-area dd">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7">
-                    <div className="toolbar-contact">
-                      <ul className="rs-contact-info">
-                        <li className="rs-contact-email">
-                          <i className="fi fi-rr-envelope-plus"></i>
-                          <a href="mailto:garagedutheatre@gmail.com">garagedutheatre@gmail.com</a>
-                        </li>
-                        <li className="rs-contact-phone">
-                          <i className="fi fi-rr-phone-call"></i>
-                          <a href="tel:0145750505"> 01 45 75 05 05</a>
-                        </li>
-                        <li className="rs-hours rs-contact-email">
-                          <i className="fi fi-rr-map-marker-home"></i> 
-                          139 Rue du Théâtre, Paris 15
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-lg-5">
-                    <div className="toolbar-sl-share">
-                      <ul className="clearfix">
-                        <li className="opening">
-                          <em><i className="fi-rr-time-add"></i> Lun-Ven : 09:00-18:00 - Sam : 09:00-13:00</em>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="menu-area menu_type_">
-              <div className="container">
-                <div className="row-table">
-                  <div className="col-cell header-logo">
-                    <div className="logo-area">
-                      <a href="/" className="custom-logo-link" rel="home">
-                        <img fetchPriority="high" width="500" height="225" src="/images/2-1.png" className="custom-logo" alt="Garage du Théâtre GT" decoding="async" sizes="(max-width: 500px) 100vw, 500px" />
-                      </a>
-                    </div>
-                    <div className="logo-area sticky-logo">
-                      <a href="/" className="custom-logo-link" rel="home">
-                        <img fetchPriority="high" width="500" height="225" src="/images/2-1.png" className="custom-logo" alt="Garage du Théâtre GT" decoding="async" sizes="(max-width: 500px) 100vw, 500px" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-cell menu-responsive">
-                    <nav className="nav navbar">
-                      <div className="navbar-menu">
-                        <div className="menu-gtmainmenu-container">
-                          <ul id="primary-menu-single" className="menu">
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/">Accueil</a></li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page"><a href="/a-propos">A propos</a></li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page"><a href="/nos-services">Nos services</a></li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </nav>
-                  </div>
-                  <div className="col-cell header-quote">
-                    <div className="btn_quote"><a href="/devis" className="quote-button">Obtenir un devis gratuit</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+        <Header />
 
         <div className="main-contain offcontents">
           <div className="container">
