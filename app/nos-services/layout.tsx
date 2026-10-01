@@ -1,39 +1,7 @@
-import type { Metadata } from "next";
+import { pageMeta } from '@/lib/meta';
 
-export const metadata: Metadata = {
-  title: "Nos services",
-  description: "Prestations mécaniques et entretien toutes marques au Garage du Théâtre GT : révision, freinage, amortisseurs, diagnostic électronique, climatisation et carrosserie.",
-  alternates: {
-    canonical: "https://garagedutheatre.fr/nos-services/",
-  },
-  openGraph: {
-    title: "Nos services – Garage du Théâtre GT",
-    description: "Prestations mécaniques et entretien toutes marques au Garage du Théâtre GT : révision, freinage, amortisseurs, diagnostic électronique, climatisation et carrosserie.",
-    url: "https://garagedutheatre.fr/nos-services/",
-    siteName: "Garage du Théâtre GT",
-    locale: "fr_FR",
-    type: "website",
-    images: [
-      {
-        url: "https://garagedutheatre.fr/images/Logo-GT-500-225-px.png",
-        width: 500,
-        height: 225,
-        alt: "Garage du Théâtre GT",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Nos services – Garage du Théâtre GT",
-    description: "Prestations mécaniques et entretien toutes marques au Garage du Théâtre GT : révision, freinage, amortisseurs, diagnostic électronique, climatisation et carrosserie.",
-    images: ["https://garagedutheatre.fr/images/Logo-GT-500-225-px.png"],
-  },
-};
+export const metadata = pageMeta('/nos-services/', 'Nos services', 'Révision et vidange, freinage, distribution, suspensions, batterie, pneus, pré-contrôle technique et échappement : les services de MECA Services, garage multimarque à Paris 15.');
 
-export default function NosServicesLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return children;
 }

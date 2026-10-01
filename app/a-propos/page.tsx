@@ -1,55 +1,61 @@
-"use client";
+import Image from 'next/image';
+import Link from 'next/link';
+import CtaBand from '@/components/CtaBand';
+import PageHero from '@/components/PageHero';
+import { Icon } from '@/components/ui';
 
-import React, { useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import Header from "../components/Header";
-
-export default function AProposPage() {
-  useEffect(() => {
-    const scrollUp = document.getElementById("scrollUp");
-    if (scrollUp) {
-      const handleScrollUp = () => {
-        if (window.scrollY > 300) {
-          scrollUp.style.display = "block";
-        } else {
-          scrollUp.style.display = "none";
-        }
-      };
-      window.addEventListener("scroll", handleScrollUp);
-      scrollUp.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-      return () => {
-        window.removeEventListener("scroll", handleScrollUp);
-      };
-    }
-  }, []);
-
+export default function AboutPage() {
   return (
-    <div className="wp-singular page-template-default page page-id-16526 wp-custom-logo wp-theme-konstruk elementor-default elementor-kit-6 elementor-page elementor-page-16526">
-      <div id="page" className="site">
-        <Header />
-        <div className="main-contain offcontents"><div className="container"><div id="content" className="site-content"><div className="row padding-"><div className="col-lg-12"><article id="post-16526" className="post-16526 page type-page status-publish hentry"><div className="entry-content"><div data-elementor-type="wp-page" data-elementor-id="16526" className="elementor elementor-16526" data-elementor-post-type="page"><section className="elementor-section elementor-top-section elementor-element elementor-element-e67f86d elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e67f86d" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}"><div className="elementor-container elementor-column-gap-default"><div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4260429 elementor-hidden-mobile" data-id="4260429" data-element_type="column"><div className="elementor-widget-wrap"></div></div><div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-86453a4" data-id="86453a4" data-element_type="column"><div className="elementor-widget-wrap elementor-element-populated"><div className="elementor-element elementor-element-341449e elementor-widget elementor-widget-rs-heading" data-id="341449e" data-element_type="widget" data-widget_type="rs-heading.default"><div className="elementor-widget-container"><div className="prelements-heading style4 animate- center"><div className="title-inner"><h1 className="title"><span className="watermark"></span>Qui sommes-nous ?</h1></div></div></div></div></div></div><div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-cccf7cf elementor-hidden-mobile" data-id="cccf7cf" data-element_type="column"><div className="elementor-widget-wrap"></div></div></div></section><section className="elementor-section elementor-top-section elementor-element elementor-element-f250f10 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f250f10" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}"><div className="elementor-container elementor-column-gap-default"><div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f926c95" data-id="f926c95" data-element_type="column"><div className="elementor-widget-wrap elementor-element-populated"><div className="elementor-element elementor-element-e1af8f9 elementor-widget elementor-widget-text-editor" data-id="e1af8f9" data-element_type="widget" data-widget_type="text-editor.default"><div className="elementor-widget-container"><p>Le Garage du Théâtre GT est un garage de réparation automobile situé au 15e arrondissement de Paris. <span style={{"color": "var( --e-global-color-text )", "fontFamily": "var( --e-global-typography-text-font-family ), Sans-serif", "fontWeight": "var( --e-global-typography-text-font-weight )"}}>Bénéficiant de la confiance d’une dizaine de clients au quotidien, nous vous offrons une expertise avancée dans la mécanique automobile pour toutes les marques du marché.</span></p><p><span style={{"color": "var( --e-global-color-text )", "fontFamily": "var( --e-global-typography-text-font-family ), Sans-serif", "fontWeight": "var( --e-global-typography-text-font-weight )"}}>Nous sommes à votre disposition pour vous conseiller et accompagner dans l’entretien et la réparation de votre voiture dans les meilleures conditions et les meilleurs prix. </span><span style={{"color": "var( --e-global-color-text )", "fontFamily": "var( --e-global-typography-text-font-family ), Sans-serif", "fontWeight": "var( --e-global-typography-text-font-weight )"}}>Le garage est ouvert de 9h à 18h en milieu de semaine et ouvre ses portes aussi chaque samedi de 9h à 13h.</span></p></div></div><div className="elementor-element elementor-element-3d06944 elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-id="3d06944" data-element_type="widget" data-widget_type="button.default"><div className="elementor-widget-container"><div className="elementor-button-wrapper"><a className="elementor-button elementor-button-link elementor-size-lg" href="/nos-services"><span className="elementor-button-content-wrapper"><span className="elementor-button-text">Découvrir nos services</span></span></a></div></div></div></div></div><div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-08b9c94" data-id="08b9c94" data-element_type="column"><div className="elementor-widget-wrap elementor-element-populated"><div className="elementor-element elementor-element-2c6138e elementor-widget elementor-widget-image" data-id="2c6138e" data-element_type="widget" data-widget_type="image.default"><div className="elementor-widget-container"><img decoding="async" width="640" height="480" src="/images/InkedIMG_0993.jpg" className="attachment-large size-large wp-image-16654" alt="" sizes="(max-width: 640px) 100vw, 640px" /></div></div></div></div></div></section><section className="elementor-section elementor-top-section elementor-element elementor-element-3a32f5a elementor-section-content-middle elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3a32f5a" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}"><div className="elementor-container elementor-column-gap-default"><div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-322b2cd" data-id="322b2cd" data-element_type="column"><div className="elementor-widget-wrap elementor-element-populated"><div className="elementor-element elementor-element-1eb6b42 elementor-widget elementor-widget-rs-heading" data-id="1eb6b42" data-element_type="widget" data-widget_type="rs-heading.default"><div className="elementor-widget-container"><div className="prelements-heading default animate- left"><div className="title-inner"><span className="sub-text">Une voiture à réparer ?</span><h2 className="title"><span className="watermark"></span>Contactez-nous pour demander un devis ou prendre un RDV</h2></div></div></div></div><section className="elementor-section elementor-inner-section elementor-element elementor-element-a0ed051 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a0ed051" data-element_type="section"><div className="elementor-container elementor-column-gap-default"><div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-86ed207" data-id="86ed207" data-element_type="column"><div className="elementor-widget-wrap elementor-element-populated"><div className="elementor-element elementor-element-f16605a elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-id="f16605a" data-element_type="widget" data-widget_type="button.default"><div className="elementor-widget-container"><div className="elementor-button-wrapper"><a className="elementor-button elementor-button-link elementor-size-lg" href="/devis"><span className="elementor-button-content-wrapper"><span className="elementor-button-text">Obtenir un devis gratuit</span></span></a></div></div></div><div className="elementor-element elementor-element-234e2aa elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-id="234e2aa" data-element_type="widget" data-widget_type="button.default"><div className="elementor-widget-container"><div className="elementor-button-wrapper"><a className="elementor-button elementor-button-link elementor-size-lg" href="/contact"><span className="elementor-button-content-wrapper"><span className="elementor-button-text">Nous contacter</span></span></a></div></div></div></div></div></div></section></div></div><div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b73442c" data-id="b73442c" data-element_type="column"><div className="elementor-widget-wrap elementor-element-populated"><div className="elementor-element elementor-element-c39e46a elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="c39e46a" data-element_type="widget" data-widget_type="divider.default"><div className="elementor-widget-container"><div className="elementor-divider"><span className="elementor-divider-separator"></span></div></div></div></div></div></div></section></div></div></article></div></div></div></div></div><footer id="rs-footer" className="rs-footer footer-style-1"><div className="footer-top"><div className="container"><div className="row"><div className="col-lg-3 footer-0"><div className="footer-logo-wrap"><a href="/" className="footer-top-logo"><img style={{"height": "30px"}} src="/images/Logo-GT-500-225-px.png" alt="Garage du Théâtre GT" /></a></div><section id="text-3" className="widget widget_text"><div className="textwidget"><p>Garage de réparation automobile toutes marques à Paris. Un service de proximité qui allie qualité de service et rapidité d’intervention.</p></div></section><section id="medvillsocialiconwi_widget-1" className="widget widget_medvillsocialiconwi_widget"><ul className="footer_social"></ul></section></div><div className="col-lg-3 footer-1"><section id="contact_widget-1" className="widget widget_contact_widget"><h3 className="footer-title">Contact</h3><ul className="fa-ul"><li className="address1"><i className="fi fi-rr-map-marker-home"></i><span>139 Rue du Théâtre, Paris 15</span></li><li className="phone_li"><i className="fi fi-rr-phone-call"></i><a href="tel:0145750505">01 45 75 05 05</a><a href="tel:"></a></li><li className="email_li"><i className="fi fi-rr-envelope-plus"></i><a href="mailto:garagedutheatre@gmail.com">garagedutheatre@gmail.com</a><a href="mailto:"></a></li></ul></section></div><div className="col-lg-3 footer-2"><section id="nav_menu-2" className="widget widget_nav_menu"><h3 className="footer-title">Nos services</h3><div className="menu-footermenu-container"><ul id="menu-footermenu" className="menu"><li id="menu-item-16568" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-16568"><a href="/">Accueil</a></li><li id="menu-item-16567" className="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-16526 current_page_item menu-item-16567"><a href="/a-propos" aria-current="page">A propos</a></li><li id="menu-item-16566" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-16566"><a href="/nos-services">Nos services</a></li><li id="menu-item-16570" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-16570"><a href="/devis">Devis</a></li><li id="menu-item-16569" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-16569"><a href="/contact">Contact</a></li></ul></div></section></div><div className="col-lg-3 footer-3"><section id="custom_html-1" className="widget_text widget widget_custom_html"><h3 className="footer-title">Heures d’ouverture</h3><div className="textwidget custom-html-widget">Lundi : 09:00-18:00
+    <main id="contenu">
+      <PageHero eyebrow="Garage automobile multimarque à Paris" title="Qui sommes-nous ?" />
 
-<br />
+      <section className="py-20 sm:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
+          <div data-reveal className="space-y-5 text-lg leading-relaxed text-ink-soft">
+            <p className="font-display text-2xl leading-snug font-bold text-ink">
+              MECA Services est un garage de réparation automobile situé au 15e arrondissement de Paris.
+            </p>
+            <p>
+              Bénéficiant de la confiance d’une dizaine de clients au quotidien, nous vous offrons une expertise avancée dans
+              la mécanique automobile pour toutes les marques du marché.
+            </p>
+            <p>
+              Nous sommes à votre disposition pour vous conseiller et accompagner dans l’entretien et la réparation de votre
+              voiture dans les meilleures conditions et les meilleurs prix.
+            </p>
+            <p className="flex gap-4 rounded-lg bg-mist p-5 text-base">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-brand-soft text-ink">
+                <Icon name="clock" />
+              </span>
+              <span>Le garage est ouvert de 9h à 18h en milieu de semaine et ouvre ses portes aussi chaque samedi de 9h à 13h.</span>
+            </p>
+            <Link
+              href="/nos-services/"
+              className="m-press mt-3 inline-flex items-center gap-2.5 rounded-md bg-ink px-6 py-3.5 text-base font-bold text-white transition hover:bg-ink-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+            >
+              Découvrir nos services
+              <Icon name="arrow" className="h-4 w-4 text-brand" />
+            </Link>
+          </div>
 
-Mardi : 09:00-18:00
+          {/* Photo encadrée : aplat jaune décalé, rappel du logo */}
+          <div data-reveal className="relative mr-4 mb-4 sm:mr-5 sm:mb-5">
+            <div aria-hidden="true" className="absolute -right-4 -bottom-4 h-2/3 w-2/3 rounded-lg bg-brand sm:-right-5 sm:-bottom-5" />
+            <div className="m-zoom relative overflow-hidden rounded-lg">
+              <Image
+                src="/images/InkedIMG_0993.jpg"
+                alt="L'entrée de l'atelier MECA Services, rue du Théâtre à Paris 15e"
+                width={1360}
+                height={1020}
+                sizes="(min-width: 1024px) 600px, 100vw"
+                className="block h-auto w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-<br />
-
-Mercredi : 09:00-18:00
-
-<br />
-
-Jeudi : 09:00-18:00
-
-<br />
-
-Vendredi : 09:00-18:00
-
-<br />
-
-Samedi : 09:00-13:00</div></section></div></div></div></div><div className="footer-bottom"><div className="container"><div className="rows"><div className="copy1"><div className="copyright text-left" style={{"padding": "0px"}}><p>Garage du Théâtre GT © Tous droits réservés</p></div></div><div className="copy2"><div className="copyright-widget text-right" style={{"padding": "0px"}}><section id="nav_menu-3" className="widget widget_nav_menu"><div className="menu-legalmenu-container"><ul id="menu-legalmenu" className="menu"><li id="menu-item-16571" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-16571"><a rel="privacy-policy" href="/privacy-policy">Politique de confidentialité</a></li><li id="menu-item-16699" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-16699"><a href="/mentions-legales">Mentions légales</a></li></ul></div></section></div></div></div></div></div></footer></div>
-<div id="scrollUp"><i className="fa fa-angle-up"></i></div>
-    </div>
+      <CtaBand />
+    </main>
   );
 }
