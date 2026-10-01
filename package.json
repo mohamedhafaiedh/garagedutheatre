@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prebuild": "npm run legal:check",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "legal:check": "node scripts/check-legal.mjs"
   },
   "dependencies": {
     "next": "16.3.5",

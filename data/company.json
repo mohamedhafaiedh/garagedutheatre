@@ -1,0 +1,30 @@
+{
+  "tradeName": "MECA Services",
+  "legalName": "MECA Services",
+  "legalForm": "SAS",
+  "shareCapital": "5 000 €",
+  "registeredOffice": "139 rue du Théâtre, 75015 Paris",
+  "siren": "944 784 099",
+  "vatNumber": "",
+  "phone": "+33 1 45 75 05 05",
+  "whatsapp": "",
+  "email": "garagedutheatre@gmail.com",
+  "publicationDirector": "M. Sabri Hadfi",
+  "address": {
+    "street": "139 Rue du Théâtre",
+    "postalCode": "75015",
+    "city": "Paris",
+    "country": "FR"
+  },
+  "host": {
+    "name": "Netlify, Inc.",
+    "website": "www.netlify.com",
+    "phone": ""
+  },
+  "creator": {
+    "name": "",
+    "website": "",
+    "phone": "",
+    "email": ""
+  }
+}

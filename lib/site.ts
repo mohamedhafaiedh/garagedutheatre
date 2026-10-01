@@ -1,17 +1,29 @@
-// Données du garage : une seule source pour les pages, le pied de page et le JSON-LD
+// Données du garage : une seule source pour les pages, le pied de page et le JSON-LD.
+// Coordonnées et informations légales de l'entreprise : data/company.json (saisies une seule fois).
+import company from '@/data/company.json';
 
 export const SITE_URL = 'https://garagedutheatre.fr';
-export const SITE_NAME = 'MECA Services';
+export const COMPANY = company;
+export const SITE_NAME = company.tradeName;
+// Nom utilisé dans les textes légaux : dénomination sociale si renseignée, sinon nom commercial
+export const COMPANY_NAME = company.legalName.trim() || company.tradeName;
+// Ligne « Dénomination sociale » des mentions légales : la forme juridique suit le nom après une virgule
+// (« MECA Services, SAS »). Vide si la dénomination n'est pas renseignée.
+export const LEGAL_NAME_WITH_FORM = company.legalName.trim()
+  ? [company.legalName.trim(), company.legalForm.trim()].filter(Boolean).join(', ')
+  : '';
 
-export const PHONE_DISPLAY = '01 45 75 05 05';
-export const PHONE_HREF = 'tel:+33145750505';
-export const EMAIL = 'garagedutheatre@gmail.com';
+const digits = (phone: string) => phone.replace(/[^\d+]/g, '');
+export const PHONE_E164 = digits(company.phone);
+export const PHONE_HREF = `tel:${PHONE_E164}`;
+// Affiché au format national (01 45 75 05 05) sur le site
+export const PHONE_DISPLAY = company.phone.replace(/^\+33\s?/, '0');
+export const EMAIL = company.email;
 
 export const ADDRESS = {
-  street: '139 Rue du Théâtre',
-  postalCode: '75015',
-  city: 'Paris',
-  short: '139 Rue du Théâtre, Paris 15'
+  ...company.address,
+  // Forme courte : « 139 Rue du Théâtre, Paris 15 »
+  short: `${company.address.street}, ${company.address.city} ${Number(company.address.postalCode.slice(-2))}`
 };
 
 export const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=139+Rue+du+Th%C3%A9%C3%A2tre+75015+Paris';

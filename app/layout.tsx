@@ -3,7 +3,7 @@ import { Archivo, Inter } from 'next/font/google';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import RevealOnScroll from '@/components/RevealOnScroll';
-import { ADDRESS, EMAIL, SERVICES, SITE_NAME, SITE_URL } from '@/lib/site';
+import { ADDRESS, COMPANY_NAME, EMAIL, PHONE_E164, SERVICES, SITE_NAME, SITE_URL } from '@/lib/site';
 import './globals.css';
 
 const archivo = Archivo({ subsets: ['latin'], variable: '--font-archivo', display: 'swap' });
@@ -17,6 +17,8 @@ const shareDescription =
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // Pas de lien automatique sur les numéros, e-mails et adresses (Safari iOS) : seuls les liens voulus sont cliquables
+  formatDetection: { telephone: false, email: false, address: false },
   title: { default: title, template: `%s – ${SITE_NAME}` },
   description,
   alternates: { canonical: '/' },
@@ -46,13 +48,14 @@ const jsonLd = {
       '@type': 'AutoRepair',
       '@id': `${SITE_URL}/#garage`,
       name: SITE_NAME,
+      legalName: COMPANY_NAME,
       // Nom inscrit sur le logo : aide Google à relier les recherches « garage du théâtre »
       alternateName: 'Garage du Théâtre GT',
       description,
       url: `${SITE_URL}/`,
       logo: `${SITE_URL}/images/Logo-GT-500-225-px.png`,
       image: [`${SITE_URL}/images/InkedIMG_0993.jpg`, `${SITE_URL}/images/Logo-GT-500-225-px.png`],
-      telephone: '+33145750505',
+      telephone: PHONE_E164,
       email: EMAIL,
       priceRange: '€€',
       address: {
