@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CurrentYear from './CurrentYear';
 import HomeLink from './HomeLink';
 import { Icon, type IconName } from './ui';
-import { ADDRESS, EMAIL, HOURS, MAPS_URL, NAV_LINKS, PHONE_DISPLAY, PHONE_HREF, QUOTE_HREF, SITE_NAME } from '@/lib/site';
+import { ADDRESS, EMAIL, EMERGENCY_PHONE_DISPLAY, EMERGENCY_PHONE_HREF, HOURS, MAPS_URL, NAV_LINKS, PHONE_DISPLAY, PHONE_HREF, QUOTE_HREF, SITE_NAME } from '@/lib/site';
 
 function ContactLine({ icon, href, children, external }: { icon: IconName; href: string; children: React.ReactNode; external?: boolean }) {
   return (
@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_0.8fr_1fr] lg:gap-10">
           <div>
             <HomeLink className="inline-block">
-              <Image src="/images/logo-gt-jaune.png" alt={SITE_NAME} width={182} height={98} className="h-20 w-auto" />
+              <Image src="/images/logo-meca-services-blanc.png" alt={SITE_NAME} width={231} height={195} className="h-28 w-auto" />
             </HomeLink>
             <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-white/65">
               Garage de réparation automobile toutes marques à Paris. Un service de proximité qui allie qualité de service et
@@ -54,6 +54,12 @@ export default function Footer() {
               </ContactLine>
               <ContactLine icon="phone" href={PHONE_HREF}>
                 {PHONE_DISPLAY}
+              </ContactLine>
+              <ContactLine icon="mobile" href={EMERGENCY_PHONE_HREF}>
+                {EMERGENCY_PHONE_DISPLAY}{' '}
+                <span className="ml-2.5 inline-block rounded-sm bg-brand px-1.5 py-0.5 align-[1px] text-[10px] leading-none font-bold tracking-[0.14em] text-ink uppercase">
+                  Urgences
+                </span>
               </ContactLine>
               <ContactLine icon="mail" href={`mailto:${EMAIL}`}>
                 {EMAIL}

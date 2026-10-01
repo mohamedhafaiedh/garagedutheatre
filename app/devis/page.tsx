@@ -1,7 +1,7 @@
 import PageHero from '@/components/PageHero';
 import QuoteForm from '@/components/QuoteForm';
 import { CallButton, Icon } from '@/components/ui';
-import { HOURS } from '@/lib/site';
+import { EMERGENCY_PHONE_DISPLAY, EMERGENCY_PHONE_HREF, HOURS } from '@/lib/site';
 
 export default function QuotePage() {
   return (
@@ -22,6 +22,18 @@ export default function QuotePage() {
           <aside className="m-rise [--rise-delay:0.2s] rounded-lg bg-ink p-7 text-white lg:sticky lg:top-24">
             <p className="font-display text-xl font-bold">Vous préférez appeler ?</p>
             <CallButton className="mt-5 w-full" />
+            {/* Portable d'urgence : bouton secondaire, contour clair */}
+            <a
+              href={EMERGENCY_PHONE_HREF}
+              aria-label={`Urgences : appeler le ${EMERGENCY_PHONE_DISPLAY}`}
+              className="m-press mt-3 flex w-full items-center justify-center gap-2.5 rounded-md border border-white/25 px-6 py-3.5 text-base font-bold whitespace-nowrap text-white transition hover:border-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              <Icon name="mobile" className="h-5 w-5 text-brand" />
+              {EMERGENCY_PHONE_DISPLAY}
+              <span className="rounded-sm bg-brand px-1.5 py-0.5 text-[10px] leading-none font-bold tracking-[0.14em] text-ink uppercase">
+                Urgences
+              </span>
+            </a>
             <p className="mt-7 flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] text-white/60 uppercase">
               <Icon name="clock" className="h-4 w-4 text-brand" />
               Heures d&apos;ouverture

@@ -1,5 +1,5 @@
 import { IconTile, type IconName } from './ui';
-import { ADDRESS, EMAIL, HOURS, MAPS_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/site';
+import { ADDRESS, EMAIL, EMERGENCY_PHONE_DISPLAY, EMERGENCY_PHONE_HREF, HOURS, MAPS_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/site';
 
 function Card({ icon, label, href, external, children }: { icon: IconName; label: string; href?: string; external?: boolean; children: React.ReactNode }) {
   const body = (
@@ -25,7 +25,7 @@ function Card({ icon, label, href, external, children }: { icon: IconName; label
   );
 }
 
-/* Coordonnées : adresse, e-mail, téléphone et horaires (premier écran : entrée au chargement) */
+/* Coordonnées : adresse, téléphone, portable d'urgence, e-mail et horaires (premier écran : entrée au chargement) */
 export default function ContactCards() {
   return (
     <div className="m-rise-group grid gap-3">
@@ -37,6 +37,11 @@ export default function ContactCards() {
       <div>
         <Card icon="phone" label="Téléphone" href={PHONE_HREF}>
           {PHONE_DISPLAY}
+        </Card>
+      </div>
+      <div>
+        <Card icon="mobile" label="Urgences · portable" href={EMERGENCY_PHONE_HREF}>
+          {EMERGENCY_PHONE_DISPLAY}
         </Card>
       </div>
       <div>

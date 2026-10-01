@@ -14,7 +14,7 @@ export function pageMeta(path: string, title: string, description: string, extra
       siteName: SITE_NAME,
       locale: 'fr_FR',
       type: 'website',
-      images: [{ url: '/images/Logo-GT-500-225-px.png', width: 500, height: 225, alt: SITE_NAME }]
+      images: [{ url: '/images/logo-meca-services-noir.png', width: 231, height: 195, alt: SITE_NAME }]
     },
     twitter: { card: 'summary_large_image', title: `${title} – ${SITE_NAME}`, description },
     ...extra

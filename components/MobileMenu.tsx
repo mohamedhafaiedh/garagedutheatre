@@ -7,7 +7,7 @@ import HomeLink from './HomeLink';
 import { usePathname } from 'next/navigation';
 import { isActive } from './Header';
 import { Icon } from './ui';
-import { HOURS, NAV_LINKS, PHONE_DISPLAY, PHONE_HREF, QUOTE_HREF } from '@/lib/site';
+import { HOURS, NAV_LINKS, PHONE_DISPLAY, PHONE_HREF, QUOTE_HREF, SITE_NAME } from '@/lib/site';
 
 const EXIT_FALLBACK_MS = 600;
 
@@ -110,7 +110,7 @@ export default function MobileMenu({
       <div className="m-drawer absolute inset-y-0 right-0 flex w-[90%] max-w-[380px] min-[360px]:w-[85%] flex-col bg-white shadow-2xl">
         <div className="flex h-[72px] shrink-0 items-center border-b border-line px-5">
           <HomeLink onNavigate={requestClose} className="shrink-0">
-            <Image src="/images/logo-gt-noir.png" alt="Garage du Théâtre GT" width={364} height={195} className="h-12 w-auto" />
+            <Image src="/images/logo-meca-services-noir.png" alt={SITE_NAME} width={231} height={195} className="h-12 w-auto" />
           </HomeLink>
         </div>
 

@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: 'fr_FR',
     type: 'website',
-    images: [{ url: '/images/Logo-GT-500-225-px.png', width: 500, height: 225, alt: SITE_NAME }]
+    images: [{ url: '/images/logo-meca-services-noir.png', width: 231, height: 195, alt: SITE_NAME }]
   },
-  twitter: { card: 'summary_large_image', title, description: shareDescription, images: ['/images/Logo-GT-500-225-px.png'] },
+  twitter: { card: 'summary_large_image', title, description: shareDescription, images: ['/images/logo-meca-services-noir.png'] },
   robots: { index: true, follow: true },
   icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' }
 };
@@ -53,8 +53,8 @@ const jsonLd = {
       alternateName: 'Garage du Théâtre GT',
       description,
       url: `${SITE_URL}/`,
-      logo: `${SITE_URL}/images/Logo-GT-500-225-px.png`,
-      image: [`${SITE_URL}/images/InkedIMG_0993.jpg`, `${SITE_URL}/images/Logo-GT-500-225-px.png`],
+      logo: `${SITE_URL}/images/logo-meca-services-noir.png`,
+      image: [`${SITE_URL}/images/InkedIMG_0993.jpg`, `${SITE_URL}/images/logo-meca-services-noir.png`],
       telephone: PHONE_E164,
       email: EMAIL,
       priceRange: '€€',

@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import HomeLink from './HomeLink';
 import MobileMenu from './MobileMenu';
 import { Icon } from './ui';
-import { NAV_LINKS, PHONE_DISPLAY, PHONE_HREF, QUOTE_HREF } from '@/lib/site';
+import { NAV_LINKS, PHONE_DISPLAY, PHONE_HREF, QUOTE_HREF, SITE_NAME } from '@/lib/site';
 
 export function isActive(pathname: string, href: string) {
   return href === '/' ? pathname === '/' : pathname.startsWith(href.replace(/\/$/, ''));
@@ -33,7 +33,7 @@ export default function Header() {
     >
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <HomeLink onNavigate={() => setOpen(false)} className="shrink-0">
-          <Image src="/images/logo-gt-noir.png" alt="Garage du Théâtre GT" width={364} height={195} preload className="h-12 w-auto sm:h-[52px]" />
+          <Image src="/images/logo-meca-services-noir.png" alt={SITE_NAME} width={231} height={195} preload className="h-12 w-auto sm:h-[52px]" />
         </HomeLink>
 
         <nav aria-label="Navigation principale" className="hidden lg:block">

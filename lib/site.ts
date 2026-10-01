@@ -18,6 +18,9 @@ export const PHONE_E164 = digits(company.phone);
 export const PHONE_HREF = `tel:${PHONE_E164}`;
 // Affiché au format national (01 45 75 05 05) sur le site
 export const PHONE_DISPLAY = company.phone.replace(/^\+33\s?/, '0');
+// Portable pour les urgences (en plus du fixe)
+export const EMERGENCY_PHONE_HREF = `tel:${digits(company.emergencyPhone)}`;
+export const EMERGENCY_PHONE_DISPLAY = company.emergencyPhone.replace(/^\+33\s?/, '0');
 export const EMAIL = company.email;
 
 export const ADDRESS = {
