@@ -24,7 +24,7 @@ export default function LegalNoticePage() {
           <a href={PHONE_HREF} className={legalLink}>
             +33 1 45 75 05 05
           </a>{' '}
-          · E-mail : {mail} · Directeur de la publication : M. Ramzi Hadfi.
+          · E-mail : {mail} · Directeur de la publication : M. Sabri Hadfi.
         </p>
         <p>
           Le site est hébergé par <Strong>Netlify, Inc.</Strong> (
